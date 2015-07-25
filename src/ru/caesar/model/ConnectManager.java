@@ -65,4 +65,22 @@ public class ConnectManager {
     }
 
 
+    public void insertFilm(Film film) throws SQLException {
+        PreparedStatement statement = null;
+        try {
+            statement = connection.prepareStatement("INSERT INTO films (title, description, genre, img, time, year) VALUES (?, ?, ?, ?, ?, ?)");
+            statement.setString(1, film.getTitle());
+            statement.setString(2, film.getDescription());
+            statement.setString(3, film.getGenre());
+            statement.setString(4, film.getImg());
+            statement.setString(5, film.getTime());
+            statement.setString(6, film.getYear());
+            statement.execute();
+        } finally {
+            if (statement!=null){
+                statement.close();
+            }
+        }
+
+    }
 }

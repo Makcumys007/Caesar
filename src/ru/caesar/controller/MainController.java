@@ -11,6 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import ru.caesar.Main;
 import ru.caesar.model.ConnectManager;
 import ru.caesar.model.Film;
 
@@ -20,6 +21,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class MainController implements Controller {
+
+    private Main main = new Main();
 
     private ConnectManager connectManager = ConnectManager.getInstance();
     private ObservableList<Film> films = FXCollections.observableArrayList();
@@ -92,6 +95,7 @@ public class MainController implements Controller {
         }
     }
 
+
     public void showDescription(Film film){
        if (film!=null){
            descriptionLabel.setText(film.getDescription());
@@ -122,5 +126,12 @@ public class MainController implements Controller {
     private Label timeLabel;
     @FXML
     private Label descriptionLabel;
+
+    @FXML
+    public void handlerInsertFilm(){
+        main.addFilm(null);
+    }
+
+    
 
 }
