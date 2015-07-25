@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import ru.caesar.controller.FilmController;
 import ru.caesar.model.Film;
@@ -27,6 +28,7 @@ public class Main extends Application {
             loader.setLocation(Main.class.getResource("view/insert.fxml"));
             AnchorPane pane = loader.load();
             Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Добавить/Изменить фильм");
             stage.setScene(new Scene(pane));
             if (film==null){

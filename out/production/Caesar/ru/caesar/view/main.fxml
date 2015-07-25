@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.input.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
@@ -13,19 +14,22 @@
          <children>
             <MenuBar>
               <menus>
-                <Menu mnemonicParsing="false" text="File">
+                <Menu mnemonicParsing="false" text="Файл">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
+                    <MenuItem mnemonicParsing="false" onAction="#handlerExit" text="Выход" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
+                <Menu mnemonicParsing="false" text="Редактировать">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
+                    <MenuItem mnemonicParsing="false" onAction="#handlerRefresh" text="Обновить">
+                           <accelerator>
+                              <KeyCodeCombination alt="DOWN" code="R" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Help">
+                <Menu mnemonicParsing="false" text="Справка">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
+                    <MenuItem onAction="#handlerAbout" mnemonicParsing="false" text="О программе" />
                   </items>
                 </Menu>
               </menus>
@@ -319,7 +323,7 @@
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button onAction="#handlerUpdateFilm" mnemonicParsing="false" text="Редактировать">
+                        <Button mnemonicParsing="false" onAction="#handlerUpdateFilm" text="Редактировать">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>

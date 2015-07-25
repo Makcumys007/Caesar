@@ -5,18 +5,23 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import ru.caesar.Main;
 import ru.caesar.model.ConnectManager;
 import ru.caesar.model.Film;
 
 
-
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -136,6 +141,31 @@ public class MainController implements Controller {
     public void handlerUpdateFilm(){
         Film film = (Film) filmsTable.getSelectionModel().getSelectedItem();
         main.addFilm(film);
+    }
+
+    @FXML
+    public void handlerRefresh(){
+        films.clear();
+        initialize();
+    }
+
+    @FXML
+    public void handlerExit(){
+        System.exit(0);
+    }
+
+    @FXML
+    public void handlerAbout(){
+        try {
+            AnchorPane pane = FXMLLoader.load(Main.class.getResource("view/about.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("О программе");
+            stage.setScene(new Scene(pane));
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

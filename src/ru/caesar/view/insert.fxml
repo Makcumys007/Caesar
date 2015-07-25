@@ -80,7 +80,7 @@
                   </Label>
                    <HBox>
                        <children>
-                           <Button fx:id="okBtn" onAction="#handlerBtnOk" mnemonicParsing="false" text="Ok" />
+                           <Button fx:id="okBtn" mnemonicParsing="false" onAction="#handlerBtnOk" text="Ok" />
                            <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#handlerBtnCancel" text="Cancel">
                            <HBox.margin>
                               <Insets left="10.0" />
