@@ -83,4 +83,23 @@ public class ConnectManager {
         }
 
     }
+
+    public void updateFilm(Film film) throws SQLException {
+        PreparedStatement statement = null;
+        try {
+            statement = connection.prepareStatement("UPDATE films SET title = ?, description = ?, genre = ?, img = ?, time = ?, year = ? WHERE id = ?");
+            statement.setString(1, film.getTitle());
+            statement.setString(2, film.getDescription());
+            statement.setString(3, film.getGenre());
+            statement.setString(4, film.getImg());
+            statement.setString(5, film.getTime());
+            statement.setString(6, film.getYear());
+            statement.setInt(7, film.getId());
+            statement.execute();
+        } finally {
+            if (statement!=null){
+                statement.close();
+            }
+        }
+    }
 }

@@ -132,6 +132,10 @@ public class MainController implements Controller {
         main.addFilm(null);
     }
 
-    
+    @FXML
+    public void handlerUpdateFilm(){
+        Film film = (Film) filmsTable.getSelectionModel().getSelectedItem();
+        main.addFilm(film);
+    }
 
 }

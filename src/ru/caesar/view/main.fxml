@@ -319,7 +319,7 @@
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Редактировать">
+                        <Button onAction="#handlerUpdateFilm" mnemonicParsing="false" text="Редактировать">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>

@@ -28,21 +28,16 @@ public class FilmController implements Controller {
     private Button okBtn;
     @FXML
     private Button cancelBtn;
-
-
+    private boolean isAddOrUpdate;
+    private int idFilm;
 
 
     @Override
     public void initialize() {
-
     }
 
     @Override
     public void initData() {
-
-    }
-
-    public void setData(){
         Film film = new Film(titleField.getText(), descriptionArea.getText(), genreField.getText(), imgField.getText(), timeField.getText(), yearField.getText());
         try {
             connectManager.insertFilm(film);
@@ -51,9 +46,36 @@ public class FilmController implements Controller {
         }
     }
 
+    public void upData(){
+        Film film = new Film(idFilm, titleField.getText(), descriptionArea.getText(), genreField.getText(), imgField.getText(), timeField.getText(), yearField.getText());
+        try {
+            connectManager.updateFilm(film);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setData(Film film, boolean isAddOrUpdate){
+        this.idFilm = film.getId();
+        this.isAddOrUpdate = isAddOrUpdate;
+        titleField.setText(film.getTitle());
+        genreField.setText(film.getGenre());
+        yearField.setText(film.getYear());
+        timeField.setText(film.getTime());
+        imgField.setText(film.getImg());
+        descriptionArea.setText(film.getDescription());
+
+    }
+
     @FXML
     public void handlerBtnOk(){
-        setData();
+        if (!isAddOrUpdate) {
+            System.out.println("Insert...");
+            initData();
+        } else {
+            System.out.println("Update...");
+            upData();
+        }
         Stage stage = (Stage) okBtn.getScene().getWindow();
         stage.close();
     }
@@ -64,4 +86,7 @@ public class FilmController implements Controller {
         stage.close();
     }
 
+    public void setIsAddOrUpdate(boolean isAddOrUpdate) {
+        this.isAddOrUpdate = isAddOrUpdate;
+    }
 }

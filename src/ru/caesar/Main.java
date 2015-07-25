@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import ru.caesar.controller.FilmController;
 import ru.caesar.model.Film;
 
 import java.io.IOException;
@@ -22,11 +23,18 @@ public class Main extends Application {
 
     public void addFilm(Film film){
         try {
-            AnchorPane pane = FXMLLoader.load(Main.class.getResource("view/insert.fxml"));
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("view/insert.fxml"));
+            AnchorPane pane = loader.load();
             Stage stage = new Stage();
             stage.setTitle("Добавить/Изменить фильм");
+            stage.setScene(new Scene(pane));
             if (film==null){
-                stage.setScene(new Scene(pane));
+                stage.show();
+            } else {
+                FilmController controller = loader.getController();
+                controller.setIsAddOrUpdate(false);
+                controller.setData(film, true);
                 stage.show();
             }
         } catch (IOException e) {

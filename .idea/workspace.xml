@@ -65,8 +65,22 @@
         <entry file="file://$PROJECT_DIR$/src/ru/caesar/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+              <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FilmController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ru/caesar/controller/FilmController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.0570071">
+              <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2507#2508#0" expanded="true" />
+                <element signature="e#2557#2558#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,25 +89,52 @@
         <entry file="file://$PROJECT_DIR$/src/ru/caesar/model/ConnectManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+              <caret line="100" column="34" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
               <folding>
-                <marker date="1437808402335" expanded="true" signature="1115:1134" placeholder="SELECT * FRO..films..." />
-                <marker date="1437808402335" expanded="true" signature="1694:1724" placeholder="DELETE FROM ..." />
-                <marker date="1437808402335" expanded="true" signature="2100:2188" placeholder="INSERT INTO ..." />
+                <marker date="1437811894621" expanded="true" signature="1115:1134" placeholder="SELECT * FRO..films..." />
+                <marker date="1437811894621" expanded="true" signature="1694:1724" placeholder="DELETE FROM ..." />
+                <marker date="1437811894621" expanded="true" signature="2100:2188" placeholder="INSERT INTO ..." />
+                <marker date="1437811894621" expanded="true" signature="2837:2933" placeholder="UPDATE films..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/caesar/view/main.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.483871">
+              <caret line="321" column="60" selection-start-line="321" selection-start-column="60" selection-end-line="321" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/caesar/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.80404353">
-              <caret line="134" column="4" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3842#3843#0" expanded="true" />
                 <element signature="e#3876#3877#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Film.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/caesar/model/Film.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="111" selection-start-line="28" selection-start-column="111" selection-end-line="28" selection-end-column="111" />
+              <folding>
+                <element signature="e#422#423#0" expanded="true" />
+                <element signature="e#454#455#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,15 +164,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ru/caesar/model/Test.java" />
-        <option value="$PROJECT_DIR$/src/ru/caesar/model/Film.java" />
         <option value="$PROJECT_DIR$/src/ru/caesar/controller/AddController.java" />
         <option value="$PROJECT_DIR$/src/ru/caesar/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/src/ru/caesar/view/main.fxml" />
-        <option value="$PROJECT_DIR$/src/ru/caesar/model/ConnectManager.java" />
         <option value="$PROJECT_DIR$/src/ru/caesar/view/insert.fxml" />
-        <option value="$PROJECT_DIR$/src/ru/caesar/controller/FilmController.java" />
-        <option value="$PROJECT_DIR$/src/ru/caesar/Main.java" />
+        <option value="$PROJECT_DIR$/src/ru/caesar/view/main.fxml" />
         <option value="$PROJECT_DIR$/src/ru/caesar/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/ru/caesar/Main.java" />
+        <option value="$PROJECT_DIR$/src/ru/caesar/model/Film.java" />
+        <option value="$PROJECT_DIR$/src/ru/caesar/model/ConnectManager.java" />
+        <option value="$PROJECT_DIR$/src/ru/caesar/controller/FilmController.java" />
       </list>
     </option>
   </component>
@@ -151,8 +192,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1301" />
-    <option name="y" value="-744" />
+    <option name="x" value="65" />
+    <option name="y" value="24" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
   </component>
@@ -661,15 +702,15 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1437644120000" duration="2641000" />
       <workItem from="1437652443655" duration="1634000" />
-      <workItem from="1437795829311" duration="12796000" />
+      <workItem from="1437795829311" duration="15330000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18373000" />
+    <option name="totallyTimeSpent" value="20907000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1301" y="-744" width="1301" height="744" extended-state="6" />
+    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -680,10 +721,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986626" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32986626" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24940239" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940239" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -778,10 +819,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="79" selection-start-line="28" selection-start-column="79" selection-end-line="28" selection-end-column="79" />
           <folding>
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1429#1430#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="false" />
+            <element signature="e#382#383#0" expanded="false" />
+            <element signature="e#1500#1501#0" expanded="true" />
+            <element signature="e#1525#1526#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -791,9 +832,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
           <folding>
-            <marker date="1437808402335" expanded="true" signature="1115:1134" placeholder="SELECT * FRO..films..." />
-            <marker date="1437808402335" expanded="true" signature="1694:1724" placeholder="DELETE FROM ..." />
-            <marker date="1437808402335" expanded="true" signature="2100:2188" placeholder="INSERT INTO ..." />
+            <marker date="1437811894621" expanded="true" signature="1115:1134" placeholder="SELECT * FRO..films..." />
+            <marker date="1437811894621" expanded="true" signature="1694:1724" placeholder="DELETE FROM ..." />
+            <marker date="1437811894621" expanded="true" signature="2100:2188" placeholder="INSERT INTO ..." />
+            <marker date="1437811894621" expanded="true" signature="2837:2933" placeholder="UPDATE films..." />
           </folding>
         </state>
       </provider>
@@ -844,17 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/caesar/view/main.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7903226">
-          <caret line="316" column="84" selection-start-line="316" selection-start-column="84" selection-end-line="316" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/caesar/view/insert.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.483871">
@@ -876,33 +907,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/caesar/model/Film.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/caesar/view/main.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="91" selection-start-line="105" selection-start-column="91" selection-end-line="105" selection-end-column="91" />
-          <folding>
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1429#1430#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-3.483871">
+          <caret line="321" column="60" selection-start-line="321" selection-start-column="60" selection-end-line="321" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/caesar/controller/FilmController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/caesar/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -910,23 +929,47 @@
     <entry file="file://$PROJECT_DIR$/src/ru/caesar/model/ConnectManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+          <caret line="100" column="34" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
           <folding>
-            <marker date="1437808402335" expanded="true" signature="1115:1134" placeholder="SELECT * FRO..films..." />
-            <marker date="1437808402335" expanded="true" signature="1694:1724" placeholder="DELETE FROM ..." />
-            <marker date="1437808402335" expanded="true" signature="2100:2188" placeholder="INSERT INTO ..." />
+            <marker date="1437811894621" expanded="true" signature="1115:1134" placeholder="SELECT * FRO..films..." />
+            <marker date="1437811894621" expanded="true" signature="1694:1724" placeholder="DELETE FROM ..." />
+            <marker date="1437811894621" expanded="true" signature="2100:2188" placeholder="INSERT INTO ..." />
+            <marker date="1437811894621" expanded="true" signature="2837:2933" placeholder="UPDATE films..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/caesar/model/Film.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="111" selection-start-line="28" selection-start-column="111" selection-end-line="28" selection-end-column="111" />
+          <folding>
+            <element signature="e#422#423#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/caesar/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80404353">
-          <caret line="134" column="4" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3842#3843#0" expanded="true" />
             <element signature="e#3876#3877#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/caesar/controller/FilmController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0570071">
+          <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2507#2508#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
           </folding>
         </state>
       </provider>

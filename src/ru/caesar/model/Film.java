@@ -26,10 +26,12 @@ public class Film {
     public Film() {
     }
 
-    public Film(int id, String title, String genre, String time, String year) {
+    public Film(int id, String title, String description, String genre, String img, String time, String year) {
         this.id = id;
         this.title = title;
+        this.description = description;
         this.genre = genre;
+        this.img = img;
         this.time = time;
         this.year = year;
     }
