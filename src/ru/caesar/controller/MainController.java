@@ -99,8 +99,14 @@ public class MainController implements Controller {
            genreLabel.setText(film.getGenre());
            yearLabel.setText(film.getYear());
            timeLabel.setText(film.getTime());
-
-        //   imgView.setImage(new Image(film.getImg()));
+           String url = film.getImg();
+           imgView.setImage(new Image(url));
+       } else {
+           descriptionLabel.setText("");
+           titleLabel.setText("");
+           genreLabel.setText("");
+           yearLabel.setText("");
+           timeLabel.setText("");
        }
     }
 
