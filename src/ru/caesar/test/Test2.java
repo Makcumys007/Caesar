@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Test2 {
     public static void main(String[] args) {
-
+        Locale.setDefault(Locale.ENGLISH);
        Calendar calendar = new GregorianCalendar();
         Date date = calendar.getTime();
         System.out.println(date);

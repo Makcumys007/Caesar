@@ -7,10 +7,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -20,6 +17,7 @@ import javafx.stage.Stage;
 import ru.caesar.Main;
 import ru.caesar.model.ConnectManager;
 import ru.caesar.model.Film;
+import ru.caesar.model.Seans;
 
 
 import java.io.IOException;
@@ -66,6 +64,10 @@ public class MainController implements Controller {
                 showDescription((Film) newValue);
             }
         });
+
+        selectAllSeanses();
+
+
 
 
 
@@ -169,8 +171,180 @@ public class MainController implements Controller {
         }
     }
 
+    private ObservableList<Seans> seanses = FXCollections.observableArrayList();
+    @FXML
+    private TableView<Seans> seansesView;
+    @FXML
+    private TableColumn<Seans, String> titleFilmS;
+    @FXML
+    private TableColumn<Seans, String> dateFilmS;
+    @FXML
+    private TableColumn<Seans, String> timeFilmS;
+
+    @FXML
+    private TableView<Seans> seansesView1;
+    @FXML
+    private TableColumn<Seans, String> titleFilmS1;
+    @FXML
+    private TableColumn<Seans, String> dateFilmS1;
+    @FXML
+    private TableColumn<Seans, String> timeFilmS1;
+
+    @FXML
+    private TableView<Seans> seansesView2;
+    @FXML
+    private TableColumn<Seans, String> titleFilmS2;
+    @FXML
+    private TableColumn<Seans, String> dateFilmS2;
+    @FXML
+    private TableColumn<Seans, String> timeFilmS2;
+
+    @FXML
+    private TableView<Seans> seansesView3;
+    @FXML
+    private TableColumn<Seans, String> titleFilmS3;
+    @FXML
+    private TableColumn<Seans, String> dateFilmS3;
+    @FXML
+    private TableColumn<Seans, String> timeFilmS3;
+
+    @FXML
+    private TableView<Seans> seansesView4;
+    @FXML
+    private TableColumn<Seans, String> titleFilmS4;
+    @FXML
+    private TableColumn<Seans, String> dateFilmS4;
+    @FXML
+    private TableColumn<Seans, String> timeFilmS4;
+
+    @FXML
+    private TableView<Seans> seansesView5;
+    @FXML
+    private TableColumn<Seans, String> titleFilmS5;
+    @FXML
+    private TableColumn<Seans, String> dateFilmS5;
+    @FXML
+    private TableColumn<Seans, String> timeFilmS5;
+
+    @FXML
+    private TableView<Seans> seansesView6;
+    @FXML
+    private TableColumn<Seans, String> titleFilmS6;
+    @FXML
+    private TableColumn<Seans, String> dateFilmS6;
+    @FXML
+    private TableColumn<Seans, String> timeFilmS6;
+
+    @FXML
+    private TabPane weekTabPane;
     @FXML
     private Tab mon;
+    @FXML
+    private Tab tue;
+    @FXML
+    private Tab wed;
+    @FXML
+    private Tab thu;
+    @FXML
+    private Tab fri;
+    @FXML
+    private Tab sat;
+    @FXML
+    private Tab sun;
+
+    @FXML
+    public void monTabSlect(){
+        seanses.clear();
+        initDataSeanses("Mon");
+        titleFilmS.setCellValueFactory(new PropertyValueFactory<Seans, String>("filmTitle"));
+        dateFilmS.setCellValueFactory(new PropertyValueFactory<Seans, String>("date"));
+        timeFilmS.setCellValueFactory(new PropertyValueFactory<Seans, String>("time"));
+        seansesView.setItems(seanses);
+    }
+
+    @FXML
+    public void tueTabSlect(){
+        seanses.clear();
+        initDataSeanses("Tue");
+        titleFilmS1.setCellValueFactory(new PropertyValueFactory<Seans, String>("filmTitle"));
+        dateFilmS1.setCellValueFactory(new PropertyValueFactory<Seans, String>("date"));
+        timeFilmS1.setCellValueFactory(new PropertyValueFactory<Seans, String>("time"));
+        seansesView1.setItems(seanses);
+    }
+
+    @FXML
+    public void wedTabSlect(){
+        seanses.clear();
+        initDataSeanses("Wed");
+        titleFilmS2.setCellValueFactory(new PropertyValueFactory<Seans, String>("filmTitle"));
+        dateFilmS2.setCellValueFactory(new PropertyValueFactory<Seans, String>("date"));
+        timeFilmS2.setCellValueFactory(new PropertyValueFactory<Seans, String>("time"));
+        seansesView2.setItems(seanses);
+    }
+
+    @FXML
+    public void thuTabSlect(){
+        seanses.clear();
+        initDataSeanses("Thu");
+        titleFilmS3.setCellValueFactory(new PropertyValueFactory<Seans, String>("filmTitle"));
+        dateFilmS3.setCellValueFactory(new PropertyValueFactory<Seans, String>("date"));
+        timeFilmS3.setCellValueFactory(new PropertyValueFactory<Seans, String>("time"));
+        seansesView3.setItems(seanses);
+    }
+
+    public void satTabSlect(){
+        seanses.clear();
+        initDataSeanses("Sat");
+        titleFilmS5.setCellValueFactory(new PropertyValueFactory<Seans, String>("filmTitle"));
+        dateFilmS5.setCellValueFactory(new PropertyValueFactory<Seans, String>("date"));
+        timeFilmS5.setCellValueFactory(new PropertyValueFactory<Seans, String>("time"));
+        seansesView5.setItems(seanses);
+    }
+
+    public void sunTabSlect(){
+        seanses.clear();
+        initDataSeanses("Sun");
+        titleFilmS6.setCellValueFactory(new PropertyValueFactory<Seans, String>("filmTitle"));
+        dateFilmS6.setCellValueFactory(new PropertyValueFactory<Seans, String>("date"));
+        timeFilmS6.setCellValueFactory(new PropertyValueFactory<Seans, String>("time"));
+        seansesView6.setItems(seanses);
+    }
+
+    public void friTabSlect(){
+        seanses.clear();
+        initDataSeanses("Fri");
+        titleFilmS4.setCellValueFactory(new PropertyValueFactory<Seans, String>("filmTitle"));
+        dateFilmS4.setCellValueFactory(new PropertyValueFactory<Seans, String>("date"));
+        timeFilmS4.setCellValueFactory(new PropertyValueFactory<Seans, String>("time"));
+        seansesView4.setItems(seanses);
+    }
+
+
+    public void selectAllSeanses(){
+
+       Tab tab = weekTabPane.getSelectionModel().getSelectedItem();
+        if (tab.getText().equalsIgnoreCase("Пн")){
+            seanses.clear();
+            initDataSeanses("Mon");
+            titleFilmS.setCellValueFactory(new PropertyValueFactory<Seans, String>("filmTitle"));
+            dateFilmS.setCellValueFactory(new PropertyValueFactory<Seans, String>("date"));
+            timeFilmS.setCellValueFactory(new PropertyValueFactory<Seans, String>("time"));
+            seansesView.setItems(seanses);
+        }
+    }
+
+    public void initDataSeanses(String day){
+
+        try {
+            List<Seans> seanses = connectManager.selectSeans(day);
+            for (int i = 0; i < seanses.size(); i++) {
+                Seans seans = seanses.get(i);
+                this.seanses.add(seans);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     public void handlerInsertSeans(){
@@ -178,8 +352,6 @@ public class MainController implements Controller {
         if (index>=0){
             Film film = (Film) filmsTable.getItems().get(index);
             main.addSeans(film);
-        } else {
-            main.addSeans(null);
         }
 
     }

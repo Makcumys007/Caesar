@@ -58,128 +58,128 @@
                           <items>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                  <children>
-                                    <TabPane prefHeight="466.0" prefWidth="362.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <TabPane fx:id="weekTabPane" prefHeight="466.0" prefWidth="362.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <tabs>
-                                          <Tab fx:id="mon" text="Пн">
+                                          <Tab fx:id="mon" onSelectionChanged="#monTabSlect" text="Пн">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
-                                                      <TableView layoutX="14.0" layoutY="49.0" prefHeight="486.0" prefWidth="463.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <TableView fx:id="seansesView" layoutX="14.0" layoutY="49.0" prefHeight="227.0" prefWidth="474.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <columnResizePolicy>
                                                             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                                          </columnResizePolicy>
                                                          <columns>
-                                                            <TableColumn prefWidth="115.953125" text="Название" />
-                                                            <TableColumn prefWidth="175.5625" text="Дата" />
-                                                            <TableColumn prefWidth="75.0" text="Начало" />
+                                                            <TableColumn fx:id="titleFilmS" prefWidth="115.953125" text="Название" />
+                                                            <TableColumn fx:id="dateFilmS" prefWidth="175.5625" text="Дата" />
+                                                            <TableColumn fx:id="timeFilmS" prefWidth="75.0" text="Начало" />
                                                          </columns>
                                                       </TableView>
                                                    </children>
                                                 </AnchorPane>
                                              </content>
                                           </Tab>
-                                          <Tab text="Вт">
+                                          <Tab fx:id="tue" onSelectionChanged="#tueTabSlect" text="Вт">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
-                                                      <TableView prefHeight="486.0" prefWidth="463.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <TableView fx:id="seansesView1" prefHeight="227.0" prefWidth="474.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <columnResizePolicy>
                                                             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                                          </columnResizePolicy>
                                                          <columns>
-                                                            <TableColumn prefWidth="115.953125" text="Название" />
-                                                            <TableColumn prefWidth="175.5625" text="Дата" />
-                                                            <TableColumn prefWidth="75.0" text="Начало" />
+                                                            <TableColumn fx:id="titleFilmS1" prefWidth="115.953125" text="Название" />
+                                                            <TableColumn fx:id="dateFilmS1" prefWidth="175.5625" text="Дата" />
+                                                            <TableColumn fx:id="timeFilmS1" prefWidth="75.0" text="Начало" />
                                                          </columns>
                                                       </TableView>
                                                    </children>
                                                 </AnchorPane>
                                              </content>
                                           </Tab>
-                                          <Tab text="Ср">
+                                          <Tab fx:id="wed" onSelectionChanged="#wedTabSlect" text="Ср">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
-                                                      <TableView prefHeight="486.0" prefWidth="463.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <TableView fx:id="seansesView2" prefHeight="227.0" prefWidth="474.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <columnResizePolicy>
                                                             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                                          </columnResizePolicy>
                                                          <columns>
-                                                            <TableColumn prefWidth="115.953125" text="Название" />
-                                                            <TableColumn prefWidth="175.5625" text="Дата" />
-                                                            <TableColumn prefWidth="75.0" text="Начало" />
+                                                            <TableColumn fx:id="titleFilmS2" prefWidth="115.953125" text="Название" />
+                                                            <TableColumn fx:id="dateFilmS2" prefWidth="175.5625" text="Дата" />
+                                                            <TableColumn fx:id="timeFilmS2" prefWidth="75.0" text="Начало" />
                                                          </columns>
                                                       </TableView>
                                                    </children>
                                                 </AnchorPane>
                                              </content>
                                           </Tab>
-                                          <Tab text="Чт">
+                                          <Tab fx:id="thu" onSelectionChanged="#thuTabSlect" text="Чт">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
-                                                      <TableView prefHeight="486.0" prefWidth="463.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <TableView fx:id="seansesView3" prefHeight="227.0" prefWidth="474.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <columnResizePolicy>
                                                             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                                          </columnResizePolicy>
                                                          <columns>
-                                                            <TableColumn prefWidth="115.953125" text="Название" />
-                                                            <TableColumn prefWidth="175.5625" text="Дата" />
-                                                            <TableColumn prefWidth="75.0" text="Начало" />
+                                                            <TableColumn fx:id="titleFilmS3" prefWidth="115.953125" text="Название" />
+                                                            <TableColumn fx:id="dateFilmS3" prefWidth="175.5625" text="Дата" />
+                                                            <TableColumn fx:id="timeFilmS3" prefWidth="75.0" text="Начало" />
                                                          </columns>
                                                       </TableView>
                                                    </children>
                                                 </AnchorPane>
                                              </content>
                                           </Tab>
-                                          <Tab text="Пт">
+                                          <Tab fx:id="fri" onSelectionChanged="#friTabSlect" text="Пт">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
-                                                      <TableView prefHeight="486.0" prefWidth="463.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <TableView fx:id="seansesView4" prefHeight="227.0" prefWidth="474.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <columnResizePolicy>
                                                             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                                          </columnResizePolicy>
                                                          <columns>
-                                                            <TableColumn prefWidth="115.953125" text="Название" />
-                                                            <TableColumn prefWidth="175.5625" text="Дата" />
-                                                            <TableColumn prefWidth="75.0" text="Начало" />
+                                                            <TableColumn fx:id="titleFilmS4" prefWidth="115.953125" text="Название" />
+                                                            <TableColumn fx:id="dateFilmS4" prefWidth="175.5625" text="Дата" />
+                                                            <TableColumn fx:id="timeFilmS4" prefWidth="75.0" text="Начало" />
                                                          </columns>
                                                       </TableView>
                                                    </children>
                                                 </AnchorPane>
                                              </content>
                                           </Tab>
-                                          <Tab text="Сб">
+                                          <Tab fx:id="sat" onSelectionChanged="#satTabSlect" text="Сб">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
-                                                      <TableView prefHeight="486.0" prefWidth="463.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <TableView fx:id="seansesView5" prefHeight="227.0" prefWidth="474.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <columnResizePolicy>
                                                             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                                          </columnResizePolicy>
                                                          <columns>
-                                                            <TableColumn prefWidth="115.953125" text="Название" />
-                                                            <TableColumn prefWidth="175.5625" text="Дата" />
-                                                            <TableColumn prefWidth="75.0" text="Начало" />
+                                                            <TableColumn fx:id="titleFilmS5" prefWidth="115.953125" text="Название" />
+                                                            <TableColumn fx:id="dateFilmS5" prefWidth="175.5625" text="Дата" />
+                                                            <TableColumn fx:id="timeFilmS5" prefWidth="75.0" text="Начало" />
                                                          </columns>
                                                       </TableView>
                                                    </children>
                                                 </AnchorPane>
                                              </content>
                                           </Tab>
-                                          <Tab text="Вс">
+                                          <Tab fx:id="sun" onSelectionChanged="#sunTabSlect" text="Вс">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
-                                                      <TableView prefHeight="486.0" prefWidth="463.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <TableView fx:id="seansesView6" prefHeight="227.0" prefWidth="474.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <columnResizePolicy>
                                                             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                                                          </columnResizePolicy>
                                                          <columns>
-                                                            <TableColumn prefWidth="115.953125" text="Название" />
-                                                            <TableColumn prefWidth="175.5625" text="Дата" />
-                                                            <TableColumn prefWidth="75.0" text="Начало" />
+                                                            <TableColumn fx:id="titleFilmS6" prefWidth="115.953125" text="Название" />
+                                                            <TableColumn fx:id="dateFilmS6" prefWidth="175.5625" text="Дата" />
+                                                            <TableColumn fx:id="timeFilmS6" prefWidth="75.0" text="Начало" />
                                                          </columns>
                                                       </TableView>
                                                    </children>

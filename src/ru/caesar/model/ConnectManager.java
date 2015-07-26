@@ -105,15 +105,40 @@ public class ConnectManager {
         }
     }
 
+    public List<Seans> selectSeans(String seansTable) throws SQLException {
+        List<Seans> seanses = new ArrayList<>();
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        try {
+            statement = connection.prepareStatement("SELECT * FROM " + seansTable);
+            resultSet = statement.executeQuery();
+            while (resultSet.next()){
+                Seans seans = new Seans(resultSet);
+                seanses.add(seans);
+            }
+
+
+        } finally {
+            if (resultSet!=null){
+                resultSet.close();
+            }
+            if (statement!=null){
+                statement.close();
+            }
+        }
+        return seanses;
+    }
+
     public void insertSeans(Seans seans) throws SQLException {
         Locale.setDefault(Locale.ENGLISH);
         String seansTable = new SimpleDateFormat("E").format(seans.getDate());
         PreparedStatement statement = null;
         try {
-            statement = connection.prepareStatement("INSERT INTO " + seansTable + " (filmId, date, time) VALUES(?,?,?)");
+            statement = connection.prepareStatement("INSERT INTO " + seansTable + " (filmId, filmTitle, date, time) VALUES(?,?,?,?)");
             statement.setInt(1, seans.getFilmId());
-            statement.setDate(2, new Date(seans.getDate().getTime()));
-            statement.setString(3, seans.getTime());
+            statement.setString(2, seans.getFilmTitle());
+            statement.setDate(3, new Date(seans.getDate().getTime()));
+            statement.setString(4, seans.getTime());
             statement.execute();
         } finally {
             if (statement!=null){

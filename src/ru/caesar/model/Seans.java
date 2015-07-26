@@ -12,10 +12,19 @@ import java.util.Date;
 public class Seans  implements Cinima{
     private int id;
     private int filmId;
+    private String filmTitle;
     private Date date;
     private String time;
 
     public Seans() {
+    }
+
+    public int getFilmId() {
+        return filmId;
+    }
+
+    public void setFilmId(int filmId) {
+        this.filmId = filmId;
     }
 
     public Seans(String time, Date date, int id) {
@@ -24,8 +33,19 @@ public class Seans  implements Cinima{
         this.id = id;
     }
 
-    public Seans(String filmId, String date, String time) {
-        this.filmId = Integer.parseInt(filmId);
+    public Seans(int filmId, String filmTitle, String date, String time) {
+        this.filmId = filmId;
+        this.filmTitle = filmTitle;
+        try {
+            this.date = new SimpleDateFormat("yyyy-MM-dd").parse(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        this.time = time;
+    }
+
+    public Seans(String filmTitle, String date, String time) {
+        this.filmTitle = filmTitle;
         try {
             this.date = new SimpleDateFormat("yyyy-MM-dd").parse(date);
         } catch (ParseException e) {
@@ -36,9 +56,10 @@ public class Seans  implements Cinima{
 
     public Seans(ResultSet resultSet) throws SQLException {
         setId(resultSet.getInt("id"));
-        setFilmId(resultSet.getInt("filmId"));
+        setFilmTitle(resultSet.getString("filmTitle"));
         setDate(resultSet.getDate("date"));
         setTime(resultSet.getString("time"));
+        setId(resultSet.getInt("filmId"));
     }
 
     public int getId() {
@@ -49,12 +70,12 @@ public class Seans  implements Cinima{
         this.id = id;
     }
 
-    public int getFilmId() {
-        return filmId;
+    public String getFilmTitle() {
+        return filmTitle;
     }
 
-    public void setFilmId(int filmId) {
-        this.filmId = filmId;
+    public void setFilmTitle(String filmTitle) {
+        this.filmTitle = filmTitle;
     }
 
     public Date getDate() {
@@ -75,6 +96,6 @@ public class Seans  implements Cinima{
 
     @Override
     public String toString() {
-        return id + " " + filmId + " " + date + " " + time;
+        return id + " " + filmTitle + " " + date + " " + time;
     }
 }

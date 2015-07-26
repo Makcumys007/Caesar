@@ -39,7 +39,9 @@ public class SeansController implements Controller {
     @FXML
     private Button cancelBtn;
     @FXML
-    private TextField filmIdField;
+    private Label filmIdLabel;
+    @FXML
+    private Label filmTitleLabel;
     @FXML
     private ChoiceBox<String> hhChoice;
     @FXML
@@ -50,7 +52,7 @@ public class SeansController implements Controller {
 
 
     private boolean isAddFromTable;
-    private int idFilm;
+    private Film film;
 
     @Override
     public void initialize() {
@@ -62,9 +64,10 @@ public class SeansController implements Controller {
         for (int i = 1; i <= 24; i++) {
             hhChoice.getItems().add(String.valueOf(i));
         }
+        mmChoice.getItems().add("05");
         int n = 5;
         int m = 0;
-        for (int i = 1; i < 12; i++) {
+        for (int i = 2; i < 12; i++) {
             m = n * i;
             mmChoice.getItems().add(String.valueOf(m));
             m = 0;
@@ -75,7 +78,7 @@ public class SeansController implements Controller {
     public void insertSeans(){
         String str = (String) dateChoice.getSelectionModel().getSelectedItem();
         String time = hhChoice.getSelectionModel().getSelectedItem() + ":" + mmChoice.getSelectionModel().getSelectedItem();
-        Seans seans = new Seans(filmIdField.getText(), str, time);
+        Seans seans = new Seans(film.getId(), film.getTitle(), str, time);
         try {
             connectManager.insertSeans(seans);
         } catch (SQLException e) {
@@ -102,8 +105,9 @@ public class SeansController implements Controller {
     }
 
     public void setDataFilm(Film film) {
-        this.idFilm = film.getId();
-        filmIdField.setText(String.valueOf(idFilm));
+        this.film = film;
+        filmIdLabel.setText(String.valueOf(film.getId()));
+        filmTitleLabel.setText(film.getTitle());
     }
 
     @FXML
