@@ -86,9 +86,8 @@ public class SeansController implements Controller {
     @FXML
     public void handlerOkBtn(){
         if (!isAddFromTable){
-
+            insertSeans();
         }
-        insertSeans();
         Stage stage = (Stage) okBtn.getScene().getWindow();
         stage.close();
     }
@@ -111,7 +110,10 @@ public class SeansController implements Controller {
     public void monIsSelected(){
         dateChoice.getItems().clear();
         Calendar calendar = new GregorianCalendar();
-        for (int i = 0; i < 25; i++) {
+        if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Пн") || new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Mon")){
+            dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+        }
+        for (int i = 0; i < 15; i++) {
             calendar.add(Calendar.DAY_OF_YEAR, 1);
             if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Пн") || new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Mon")){
                 dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
@@ -123,7 +125,10 @@ public class SeansController implements Controller {
     public void tueIsSelected(){
         dateChoice.getItems().clear();
         Calendar calendar = new GregorianCalendar();
-        for (int i = 0; i < 25; i++) {
+        if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Вт") || new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Tue")){
+            dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+        }
+        for (int i = 0; i < 15; i++) {
             calendar.add(Calendar.DAY_OF_YEAR, 1);
             if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Вт") || new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Tue")){
                 dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
@@ -135,7 +140,11 @@ public class SeansController implements Controller {
     public void wedIsSelected(){
         dateChoice.getItems().clear();
         Calendar calendar = new GregorianCalendar();
-        for (int i = 0; i < 25; i++) {
+        if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Ср") ||
+                new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Wed")){
+            dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+        }
+        for (int i = 0; i < 15; i++) {
             calendar.add(Calendar.DAY_OF_YEAR, 1);
             if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Ср") ||
                     new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Wed")){
@@ -148,7 +157,11 @@ public class SeansController implements Controller {
     public void thuIsSelected(){
         dateChoice.getItems().clear();
         Calendar calendar = new GregorianCalendar();
-        for (int i = 0; i < 25; i++) {
+        if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Чт") ||
+                new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Thu")){
+            dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+        }
+        for (int i = 0; i < 15; i++) {
             calendar.add(Calendar.DAY_OF_YEAR, 1);
             if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Чт") ||
                     new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Thu")){
@@ -161,7 +174,11 @@ public class SeansController implements Controller {
     public void friIsSelected(){
         dateChoice.getItems().clear();
         Calendar calendar = new GregorianCalendar();
-        for (int i = 0; i < 25; i++) {
+        if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Пт") ||
+                new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Fri")){
+            dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+        }
+        for (int i = 0; i < 15; i++) {
             calendar.add(Calendar.DAY_OF_YEAR, 1);
             if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Пт") ||
                     new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Fri")){
@@ -174,7 +191,11 @@ public class SeansController implements Controller {
     public void satIsSelected(){
         dateChoice.getItems().clear();
         Calendar calendar = new GregorianCalendar();
-        for (int i = 0; i < 25; i++) {
+        if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Сб") ||
+                new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Sat")){
+            dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+        }
+        for (int i = 0; i < 15; i++) {
             calendar.add(Calendar.DAY_OF_YEAR, 1);
             if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Сб") ||
                     new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Sat")){
@@ -187,7 +208,11 @@ public class SeansController implements Controller {
     public void sunIsSelected(){
         dateChoice.getItems().clear();
         Calendar calendar = new GregorianCalendar();
-        for (int i = 0; i < 25; i++) {
+        if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Вс") ||
+                new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Sun")){
+            dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+        }
+        for (int i = 0; i < 15; i++) {
             calendar.add(Calendar.DAY_OF_YEAR, 1);
             if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Вс") ||
                     new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Sun")){

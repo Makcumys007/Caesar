@@ -1,8 +1,10 @@
 package ru.caesar.model;
 
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by advirtys on 18.07.15.
@@ -104,9 +106,11 @@ public class ConnectManager {
     }
 
     public void insertSeans(Seans seans) throws SQLException {
+        Locale.setDefault(Locale.ENGLISH);
+        String seansTable = new SimpleDateFormat("E").format(seans.getDate());
         PreparedStatement statement = null;
         try {
-            statement = connection.prepareStatement("INSERT INTO seans (filmId, date, time) VALUES(?,?,?)");
+            statement = connection.prepareStatement("INSERT INTO " + seansTable + " (filmId, date, time) VALUES(?,?,?)");
             statement.setInt(1, seans.getFilmId());
             statement.setDate(2, new Date(seans.getDate().getTime()));
             statement.setString(3, seans.getTime());

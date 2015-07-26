@@ -1,9 +1,7 @@
 package ru.caesar.test;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.util.*;
 
 public class Test2 {
     public static void main(String[] args) {
@@ -14,6 +12,7 @@ public class Test2 {
 
         for (int i = 0; i < 7; i++) {
             calendar.add(Calendar.DAY_OF_YEAR, 1);
+
 
                 System.out.println(new SimpleDateFormat("E").format(calendar.getTime()));
 
