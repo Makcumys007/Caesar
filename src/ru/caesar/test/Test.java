@@ -1,4 +1,7 @@
-package ru.caesar.model;
+package ru.caesar.test;
+
+import ru.caesar.model.ConnectManager;
+import ru.caesar.model.Film;
 
 import java.sql.SQLException;
 import java.util.List;

@@ -7,6 +7,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import ru.caesar.controller.FilmController;
+import ru.caesar.controller.SeansController;
+import ru.caesar.model.Cinima;
 import ru.caesar.model.Film;
 
 import java.io.IOException;
@@ -42,6 +44,31 @@ public class Main extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void addSeans(Cinima cinima){
+        try {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("view/seans.fxml"));
+            AnchorPane pane = loader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Добавить/Изменить сеанс");
+            stage.setScene(new Scene(pane));
+            if (cinima==null) {
+                stage.show();
+            } else {
+                if (cinima instanceof Film){
+                    Film film = (Film) cinima;
+                    SeansController controller = loader.getController();
+                    controller.setIsAddFromTable(false);
+                    controller.setDataFilm(film);
+                    stage.show();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public static void main(String[] args) {

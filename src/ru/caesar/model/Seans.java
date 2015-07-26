@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * Created by advirtys on 18.07.15.
  */
-public class Seans {
+public class Seans  implements Cinima{
     private int id;
     private int filmId;
     private Date date;

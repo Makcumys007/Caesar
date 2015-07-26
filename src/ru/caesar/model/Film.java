@@ -6,7 +6,7 @@ import java.sql.SQLException;
 /**
  * Created by advirtys on 18.07.15.
  */
-public class Film {
+public class Film implements Cinima{
     private int id;
     private String title;
     private String description;
