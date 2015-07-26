@@ -102,4 +102,19 @@ public class ConnectManager {
             }
         }
     }
+
+    public void insertSeans(Seans seans) throws SQLException {
+        PreparedStatement statement = null;
+        try {
+            statement = connection.prepareStatement("INSERT INTO seans (filmId, date, time) VALUES(?,?,?)");
+            statement.setInt(1, seans.getFilmId());
+            statement.setDate(2, new Date(seans.getDate().getTime()));
+            statement.setString(3, seans.getTime());
+            statement.execute();
+        } finally {
+            if (statement!=null){
+                statement.close();
+            }
+        }
+    }
 }

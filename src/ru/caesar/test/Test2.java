@@ -12,11 +12,10 @@ public class Test2 {
         Date date = calendar.getTime();
         System.out.println(date);
 
-        for (int i = 0; i < 25; i++) {
+        for (int i = 0; i < 7; i++) {
             calendar.add(Calendar.DAY_OF_YEAR, 1);
-            if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Вс")){
-                System.out.println(calendar.getTime());
-            }
+
+                System.out.println(new SimpleDateFormat("E").format(calendar.getTime()));
 
         }
 

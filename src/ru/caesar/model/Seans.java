@@ -2,6 +2,8 @@ package ru.caesar.model;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -22,9 +24,13 @@ public class Seans  implements Cinima{
         this.id = id;
     }
 
-    public Seans(int filmId, Date date, String time) {
-        this.filmId = filmId;
-        this.date = date;
+    public Seans(String filmId, String date, String time) {
+        this.filmId = Integer.parseInt(filmId);
+        try {
+            this.date = new SimpleDateFormat("yyyy-MM-dd").parse(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         this.time = time;
     }
 

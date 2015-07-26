@@ -26,16 +26,16 @@
                   </Label>
                   <HBox>
                      <children>
-                        <RadioButton fx:id="mon" mnemonicParsing="false" text="Пн">
+                        <RadioButton fx:id="mon" mnemonicParsing="false" onAction="#monIsSelected" text="Пн">
                            <toggleGroup>
                               <ToggleGroup fx:id="weekGroup" />
                            </toggleGroup></RadioButton>
-                        <RadioButton fx:id="tue" mnemonicParsing="false" text="Вт" toggleGroup="$weekGroup" />
-                        <RadioButton fx:id="wen" mnemonicParsing="false" text="Ср" toggleGroup="$weekGroup" />
-                        <RadioButton fx:id="thu" mnemonicParsing="false" text="Чт" toggleGroup="$weekGroup" />
-                        <RadioButton fx:id="fri" mnemonicParsing="false" text="Пт" toggleGroup="$weekGroup" />
-                        <RadioButton fx:id="sat" mnemonicParsing="false" text="Сб" toggleGroup="$weekGroup" />
-                        <RadioButton fx:id="sun" mnemonicParsing="false" text="ВС" toggleGroup="$weekGroup" />
+                        <RadioButton fx:id="tue" mnemonicParsing="false" onAction="#tueIsSelected" text="Вт" toggleGroup="$weekGroup" />
+                        <RadioButton fx:id="wen" mnemonicParsing="false" onAction="#wedIsSelected" text="Ср" toggleGroup="$weekGroup" />
+                        <RadioButton fx:id="thu" mnemonicParsing="false" onAction="#thuIsSelected" text="Чт" toggleGroup="$weekGroup" />
+                        <RadioButton fx:id="fri" mnemonicParsing="false" onAction="#friIsSelected" text="Пт" toggleGroup="$weekGroup" />
+                        <RadioButton fx:id="sat" mnemonicParsing="false" onAction="#satIsSelected" text="Сб" toggleGroup="$weekGroup" />
+                        <RadioButton fx:id="sun" mnemonicParsing="false" onAction="#sunIsSelected" text="ВС" toggleGroup="$weekGroup" />
                      </children>
                      <HBox.margin>
                         <Insets left="20.0" />
@@ -55,12 +55,12 @@
                               <Insets right="5.0" />
                            </HBox.margin>
                         </Label>
-                        <ChoiceBox prefWidth="50.0">
+                        <ChoiceBox fx:id="hhChoice" prefWidth="50.0">
                            <HBox.margin>
                               <Insets right="5.0" />
                            </HBox.margin>
                         </ChoiceBox>
-                        <ChoiceBox prefWidth="50.0" />
+                        <ChoiceBox fx:id="mmChoice" prefWidth="50.0" />
                      </children>
                      <HBox.margin>
                         <Insets right="10.0" />
@@ -73,7 +73,7 @@
                               <Insets right="5.0" />
                            </HBox.margin>
                         </Label>
-                        <ChoiceBox prefWidth="150.0" />
+                        <ChoiceBox fx:id="dateChoice" prefWidth="150.0" />
                      </children>
                   </HBox>
                </children>
@@ -102,7 +102,7 @@
                   </HBox>
                   <HBox alignment="TOP_RIGHT">
                      <children>
-                        <Button fx:id="okBtn" mnemonicParsing="false" text="Ok">
+                        <Button fx:id="okBtn" mnemonicParsing="false" onAction="#handlerOkBtn" text="Ok">
                            <HBox.margin>
                               <Insets right="20.0" />
                            </HBox.margin>
