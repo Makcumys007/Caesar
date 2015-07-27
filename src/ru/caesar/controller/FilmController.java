@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.controlsfx.dialog.Dialogs;
 import ru.caesar.model.ConnectManager;
 import ru.caesar.model.Film;
 
@@ -38,20 +39,26 @@ public class FilmController implements Controller {
 
     @Override
     public void initData() {
-        Film film = new Film(titleField.getText(), descriptionArea.getText(), genreField.getText(), imgField.getText(), timeField.getText(), yearField.getText());
-        try {
-            connectManager.insertFilm(film);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        if (isValidator()) {
+            Film film = new Film(titleField.getText(), descriptionArea.getText(), genreField.getText(), imgField.getText(), timeField.getText(), yearField.getText());
+            try {
+                connectManager.insertFilm(film);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            System.out.println("Insert...");
+        } 
     }
 
     public void upData(){
-        Film film = new Film(idFilm, titleField.getText(), descriptionArea.getText(), genreField.getText(), imgField.getText(), timeField.getText(), yearField.getText());
-        try {
-            connectManager.updateFilm(film);
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if (isValidator()) {
+            Film film = new Film(idFilm, titleField.getText(), descriptionArea.getText(), genreField.getText(), imgField.getText(), timeField.getText(), yearField.getText());
+            try {
+                connectManager.updateFilm(film);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            System.out.println("Update...");
         }
     }
 
@@ -70,10 +77,10 @@ public class FilmController implements Controller {
     @FXML
     public void handlerBtnOk(){
         if (!isAddOrUpdate) {
-            System.out.println("Insert...");
+
             initData();
         } else {
-            System.out.println("Update...");
+
             upData();
         }
         Stage stage = (Stage) okBtn.getScene().getWindow();
@@ -84,6 +91,20 @@ public class FilmController implements Controller {
     public void handlerBtnCancel(){
         Stage stage = (Stage) cancelBtn.getScene().getWindow();
         stage.close();
+    }
+
+    public boolean isValidator(){
+        if (titleField.getText().length() == 0 ||
+                genreField.getText().length() == 0 ||
+                yearField.getText().length() == 0 ||
+                timeField.getText().length() == 0 ||
+                imgField.getText().length() == 0 ||
+                descriptionArea.getText().length() == 0){
+            Dialogs.create().title("Внимание").masthead("Не коректные данные").message("Заполните все поля").showError();
+            return false;
+        } else {
+            return true;
+        }
     }
 
     public void setIsAddOrUpdate(boolean isAddOrUpdate) {

@@ -4,6 +4,7 @@
     <root id="archive" name="Caesar.jar">
       <element id="module-output" name="Caesar" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.6/mysql-connector-java-5.1.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/lib/controlsfx-8.0.6_20.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

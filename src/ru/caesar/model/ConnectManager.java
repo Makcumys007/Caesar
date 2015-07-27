@@ -178,4 +178,35 @@ public class ConnectManager {
             }
         }
     }
+
+    public void removeSeans(Film film) throws SQLException {
+        PreparedStatement statement = null;
+        try {
+            statement = connection.prepareStatement("DELETE  FROM Mon WHERE filmId = ?");
+            statement.setInt(1, film.getId());
+            statement.execute();
+            statement = connection.prepareStatement("DELETE  FROM Tue WHERE filmId = ?");
+            statement.setInt(1, film.getId());
+            statement.execute();
+            statement = connection.prepareStatement("DELETE  FROM Wed WHERE filmId = ?");
+            statement.setInt(1, film.getId());
+            statement.execute();
+            statement = connection.prepareStatement("DELETE  FROM Fri WHERE filmId = ?");
+            statement.setInt(1, film.getId());
+            statement.execute();
+            statement = connection.prepareStatement("DELETE  FROM Thu WHERE filmId = ?");
+            statement.setInt(1, film.getId());
+            statement.execute();
+            statement = connection.prepareStatement("DELETE  FROM Sat WHERE filmId = ?");
+            statement.setInt(1, film.getId());
+            statement.execute();
+            statement = connection.prepareStatement("DELETE  FROM Sun WHERE filmId = ?");
+            statement.setInt(1, film.getId());
+            statement.execute();
+        } finally {
+            if (statement!=null){
+                statement.close();
+            }
+        }
+    }
 }

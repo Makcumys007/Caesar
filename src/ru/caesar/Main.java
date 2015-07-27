@@ -3,6 +3,8 @@ package ru.caesar;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -15,10 +17,12 @@ import ru.caesar.model.Seans;
 import java.io.IOException;
 
 public class Main extends Application {
-
+    private Stage mainStage;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        this.mainStage = primaryStage;
+        this.mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("resources/img/icon.png")));
       AnchorPane pane = FXMLLoader.load(Main.class.getResource("view/main.fxml"));
         primaryStage.setTitle("Caesar Admin");
           primaryStage.setScene(new Scene(pane));
@@ -43,7 +47,7 @@ public class Main extends Application {
                 stage.show();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace();this.mainStage.getIcons().add(new Image("file:resources/img/icon.png"));
         }
     }
 

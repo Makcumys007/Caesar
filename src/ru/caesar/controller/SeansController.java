@@ -143,11 +143,12 @@ public class SeansController implements Controller {
         Calendar calendar = new GregorianCalendar();
         if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Пн") || new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Mon")){
             dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
-        }
-        for (int i = 0; i < 15; i++) {
-            calendar.add(Calendar.DAY_OF_YEAR, 1);
-            if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Пн") || new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Mon")){
-                dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+        } else {
+            for (int i = 1; i < 8; i++) {
+                calendar.add(Calendar.DAY_OF_YEAR, 1);
+                if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Пн") || new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Mon")) {
+                    dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+                }
             }
         }
     }
@@ -158,96 +159,102 @@ public class SeansController implements Controller {
         Calendar calendar = new GregorianCalendar();
         if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Вт") || new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Tue")){
             dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
-        }
-        for (int i = 0; i < 15; i++) {
-            calendar.add(Calendar.DAY_OF_YEAR, 1);
-            if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Вт") || new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Tue")){
-                dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+        } else {
+            for (int i = 1; i < 8; i++) {
+                calendar.add(Calendar.DAY_OF_YEAR, 1);
+                if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Вт") || new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Tue")) {
+                    dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+                }
             }
         }
     }
 
     @FXML
-    public void wedIsSelected(){
+    public void wedIsSelected() {
         dateChoice.getItems().clear();
         Calendar calendar = new GregorianCalendar();
         if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Ср") ||
-                new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Wed")){
+                new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Wed")) {
             dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
-        }
-        for (int i = 0; i < 15; i++) {
-            calendar.add(Calendar.DAY_OF_YEAR, 1);
-            if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Ср") ||
-                    new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Wed")){
-                dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+        } else {
+            for (int i = 1; i < 8; i++) {
+                calendar.add(Calendar.DAY_OF_YEAR, 1);
+                if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Ср") ||
+                        new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Wed")) {
+                    dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+                }
             }
         }
     }
 
     @FXML
-    public void thuIsSelected(){
+    public void thuIsSelected() {
         dateChoice.getItems().clear();
         Calendar calendar = new GregorianCalendar();
         if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Чт") ||
-                new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Thu")){
+                new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Thu")) {
             dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
-        }
-        for (int i = 0; i < 15; i++) {
-            calendar.add(Calendar.DAY_OF_YEAR, 1);
-            if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Чт") ||
-                    new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Thu")){
-                dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+        } else {
+            for (int i = 1; i < 8; i++) {
+                calendar.add(Calendar.DAY_OF_YEAR, 1);
+                if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Чт") ||
+                        new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Thu")) {
+                    dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+                }
             }
         }
     }
 
     @FXML
-    public void friIsSelected(){
+    public void friIsSelected() {
         dateChoice.getItems().clear();
         Calendar calendar = new GregorianCalendar();
         if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Пт") ||
-                new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Fri")){
+                new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Fri")) {
             dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
-        }
-        for (int i = 0; i < 15; i++) {
-            calendar.add(Calendar.DAY_OF_YEAR, 1);
-            if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Пт") ||
-                    new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Fri")){
-                dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+        } else {
+            for (int i = 1; i < 8; i++) {
+                calendar.add(Calendar.DAY_OF_YEAR, 1);
+                if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Пт") ||
+                        new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Fri")) {
+                    dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+                }
             }
         }
     }
 
     @FXML
-    public void satIsSelected(){
+    public void satIsSelected() {
         dateChoice.getItems().clear();
         Calendar calendar = new GregorianCalendar();
         if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Сб") ||
-                new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Sat")){
+                new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Sat")) {
             dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
-        }
-        for (int i = 0; i < 15; i++) {
-            calendar.add(Calendar.DAY_OF_YEAR, 1);
-            if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Сб") ||
-                    new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Sat")){
-                dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+        } else {
+            for (int i = 1; i < 8; i++) {
+                calendar.add(Calendar.DAY_OF_YEAR, 1);
+                if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Сб") ||
+                        new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Sat")) {
+                    dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+                }
             }
         }
     }
 
     @FXML
-    public void sunIsSelected(){
+    public void sunIsSelected() {
         dateChoice.getItems().clear();
         Calendar calendar = new GregorianCalendar();
         if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Вс") ||
-                new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Sun")){
+                new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Sun")) {
             dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
-        }
-        for (int i = 0; i < 15; i++) {
-            calendar.add(Calendar.DAY_OF_YEAR, 1);
-            if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Вс") ||
-                    new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Sun")){
-                dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+        } else {
+            for (int i = 1; i < 8; i++) {
+                calendar.add(Calendar.DAY_OF_YEAR, 1);
+                if (new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Вс") ||
+                        new SimpleDateFormat("E").format(calendar.getTime()).equalsIgnoreCase("Sun")) {
+                    dateChoice.getItems().add(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()));
+                }
             }
         }
     }

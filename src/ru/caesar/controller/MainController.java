@@ -14,6 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import org.controlsfx.dialog.Dialogs;
 import ru.caesar.Main;
 import ru.caesar.model.ConnectManager;
 import ru.caesar.model.Film;
@@ -99,6 +100,11 @@ public class MainController implements Controller {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+            try {
+                connectManager.removeSeans(film);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
             filmsTable.getItems().remove(index);
         }
     }
@@ -159,16 +165,7 @@ public class MainController implements Controller {
 
     @FXML
     public void handlerAbout(){
-        try {
-            AnchorPane pane = FXMLLoader.load(Main.class.getResource("view/about.fxml"));
-            Stage stage = new Stage();
-            stage.setTitle("О программе");
-            stage.setScene(new Scene(pane));
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Dialogs.create().title("О программе").masthead("О программе:").message("Автор: Абылкасов Максим \n 2015 год").showInformation();
     }
 
     private ObservableList<Seans> seanses = FXCollections.observableArrayList();
