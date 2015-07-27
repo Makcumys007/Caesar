@@ -356,4 +356,124 @@ public class MainController implements Controller {
 
     }
 
+    @FXML
+    public void handlerUpdateSeans(){
+        Seans seans = seansesView.getSelectionModel().getSelectedItem();
+        if (seans!=null){
+            main.addSeans(seans);
+        }
+
+        Seans seans1 = seansesView1.getSelectionModel().getSelectedItem();
+        if (seans1!=null){
+            main.addSeans(seans1);
+        }
+
+        Seans seans2 = seansesView2.getSelectionModel().getSelectedItem();
+        if (seans2!=null){
+            main.addSeans(seans2);
+        }
+
+        Seans seans3 = seansesView3.getSelectionModel().getSelectedItem();
+        if (seans3!=null){
+            main.addSeans(seans3);
+        }
+
+        Seans seans4 = seansesView4.getSelectionModel().getSelectedItem();
+        if (seans4!=null){
+            main.addSeans(seans4);
+        }
+
+        Seans seans5 = seansesView5.getSelectionModel().getSelectedItem();
+        if (seans5!=null){
+            main.addSeans(seans5);
+        }
+
+        Seans seans6 = seansesView6.getSelectionModel().getSelectedItem();
+        if (seans6!=null){
+            main.addSeans(seans6);
+        }
+
+    }
+
+    @FXML
+    public void handlerRemoveSeans(){
+
+        int index = seansesView.getSelectionModel().getSelectedIndex();
+        if (index>=0){
+            Seans seans = seansesView.getItems().get(index);
+            try {
+                connectManager.removeSeans(seans, "Mon");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            seansesView.getItems().remove(index);
+        }
+
+        int index1 = seansesView1.getSelectionModel().getSelectedIndex();
+        if (index1>=0){
+            Seans seans = seansesView1.getItems().get(index1);
+            try {
+                connectManager.removeSeans(seans, "Tue");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            seansesView1.getItems().remove(index1);
+        }
+
+        int index2 = seansesView2.getSelectionModel().getSelectedIndex();
+        if (index2>=0){
+            Seans seans = seansesView2.getItems().get(index2);
+            try {
+                connectManager.removeSeans(seans, "Wed");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            seansesView2.getItems().remove(index2);
+        }
+
+        int index3 = seansesView3.getSelectionModel().getSelectedIndex();
+        if (index3>=0){
+            Seans seans = seansesView3.getItems().get(index3);
+            try {
+                connectManager.removeSeans(seans, "Thu");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            seansesView3.getItems().remove(index3);
+        }
+
+        int index4 = seansesView4.getSelectionModel().getSelectedIndex();
+        if (index4>=0){
+            Seans seans = seansesView4.getItems().get(index4);
+            try {
+                connectManager.removeSeans(seans, "Fri");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            seansesView4.getItems().remove(index4);
+        }
+
+        int index5 = seansesView5.getSelectionModel().getSelectedIndex();
+        if (index5>=0){
+            Seans seans = seansesView5.getItems().get(index5);
+            try {
+                connectManager.removeSeans(seans, "Sat");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            seansesView5.getItems().remove(index5);
+        }
+
+        int index6 = seansesView6.getSelectionModel().getSelectedIndex();
+        if (index6>=0){
+            Seans seans = seansesView6.getItems().get(index6);
+            try {
+                connectManager.removeSeans(seans, "Sun");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            seansesView6.getItems().remove(index6);
+        }
+    }
+
 }

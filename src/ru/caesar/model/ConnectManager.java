@@ -146,4 +146,36 @@ public class ConnectManager {
             }
         }
     }
+
+    public void removeSeans(Seans seans, String seansTable) throws SQLException {
+        PreparedStatement statement = null;
+        try {
+            statement = connection.prepareStatement("DELETE FROM " + seansTable + " WHERE id = ?");
+            statement.setInt(1, seans.getId());
+            statement.execute();
+        } finally {
+            if (statement!=null){
+                statement.close();
+            }
+        }
+    }
+
+    public void updateSeanse(Seans seans2) throws SQLException {
+        Locale.setDefault(Locale.ENGLISH);
+        String seansTable = new SimpleDateFormat("E").format(seans2.getDate());
+        PreparedStatement statement = null;
+        try {
+            statement = connection.prepareStatement("UPDATE " + seansTable + " SET filmId = ?, filmTitle = ?, date = ?, time = ? WHERE id = ?");
+            statement.setInt(1, seans2.getFilmId());
+            statement.setString(2, seans2.getFilmTitle());
+            statement.setDate(3, new Date(seans2.getDate().getTime()));
+            statement.setString(4, seans2.getTime());
+            statement.setInt(5, seans2.getId());
+            statement.execute();
+        } finally {
+            if (statement!=null){
+                statement.close();
+            }
+        }
+    }
 }

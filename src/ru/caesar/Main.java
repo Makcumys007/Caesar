@@ -10,6 +10,7 @@ import ru.caesar.controller.FilmController;
 import ru.caesar.controller.SeansController;
 import ru.caesar.model.Cinima;
 import ru.caesar.model.Film;
+import ru.caesar.model.Seans;
 
 import java.io.IOException;
 
@@ -54,17 +55,19 @@ public class Main extends Application {
             Stage stage = new Stage();
             stage.setTitle("Добавить/Изменить сеанс");
             stage.setScene(new Scene(pane));
-            if (cinima==null) {
-                stage.show();
-            } else {
+
                 if (cinima instanceof Film){
                     Film film = (Film) cinima;
                     SeansController controller = loader.getController();
-                    controller.setIsAddFromTable(false);
                     controller.setDataFilm(film);
                     stage.show();
+                } else if (cinima instanceof Seans){
+                    Seans seans = (Seans) cinima;
+                    SeansController controller = loader.getController();
+                    controller.setDataSeans(seans);
+                    stage.show();
                 }
-            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }

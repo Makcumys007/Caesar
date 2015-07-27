@@ -44,6 +44,18 @@ public class Seans  implements Cinima{
         this.time = time;
     }
 
+    public Seans(int id, int filmId, String filmTitle, String date, String time) {
+        this.id = id;
+        this.filmId = filmId;
+        this.filmTitle = filmTitle;
+        try {
+            this.date = new SimpleDateFormat("yyyy-MM-dd").parse(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        this.time = time;
+    }
+
     public Seans(String filmTitle, String date, String time) {
         this.filmTitle = filmTitle;
         try {
@@ -59,7 +71,7 @@ public class Seans  implements Cinima{
         setFilmTitle(resultSet.getString("filmTitle"));
         setDate(resultSet.getDate("date"));
         setTime(resultSet.getString("time"));
-        setId(resultSet.getInt("filmId"));
+        setFilmId(resultSet.getInt("filmId"));
     }
 
     public int getId() {
@@ -96,6 +108,6 @@ public class Seans  implements Cinima{
 
     @Override
     public String toString() {
-        return id + " " + filmTitle + " " + date + " " + time;
+        return id + " " + filmId + " " + filmTitle + " " + date + " " + time;
     }
 }

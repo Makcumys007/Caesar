@@ -1,6 +1,5 @@
 package ru.caesar.controller;
 
-import javafx.beans.property.ReadOnlyIntegerProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
@@ -11,7 +10,6 @@ import ru.caesar.model.Seans;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class SeansController implements Controller {
@@ -53,6 +51,9 @@ public class SeansController implements Controller {
 
     private boolean isAddFromTable;
     private Film film;
+    private boolean isUpdateTable;
+    private Seans seans;
+
 
     @Override
     public void initialize() {
@@ -64,6 +65,7 @@ public class SeansController implements Controller {
         for (int i = 1; i <= 24; i++) {
             hhChoice.getItems().add(String.valueOf(i));
         }
+        mmChoice.getItems().add("00");
         mmChoice.getItems().add("05");
         int n = 5;
         int m = 0;
@@ -72,7 +74,7 @@ public class SeansController implements Controller {
             mmChoice.getItems().add(String.valueOf(m));
             m = 0;
         }
-        mmChoice.getItems().add("00");
+
 
     }
     public void insertSeans(){
@@ -86,10 +88,28 @@ public class SeansController implements Controller {
         }
     }
 
+    public void updateSeans(){
+        String str = (String) dateChoice.getSelectionModel().getSelectedItem();
+        String time = hhChoice.getSelectionModel().getSelectedItem() + ":" + mmChoice.getSelectionModel().getSelectedItem();
+        Seans seans2 = new Seans(seans.getId(), seans.getFilmId(), seans.getFilmTitle(), str, time);
+        try {
+            connectManager.updateSeanse(seans2);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     @FXML
     public void handlerOkBtn(){
-        if (!isAddFromTable){
+        System.out.println(isAddFromTable);
+        if (isAddFromTable){
             insertSeans();
+        }
+        System.out.println(isUpdateTable);
+        if (isUpdateTable){
+
+            updateSeans();
         }
         Stage stage = (Stage) okBtn.getScene().getWindow();
         stage.close();
@@ -101,13 +121,20 @@ public class SeansController implements Controller {
         stage.close();
     }
 
-    public void setIsAddFromTable(boolean isAddFromTable) {
-    }
+
 
     public void setDataFilm(Film film) {
+        this.isAddFromTable = true;
         this.film = film;
         filmIdLabel.setText(String.valueOf(film.getId()));
         filmTitleLabel.setText(film.getTitle());
+    }
+
+    public void setDataSeans(Seans seans) {
+        this.seans = seans;
+        this.isUpdateTable = true;
+        filmIdLabel.setText(String.valueOf(seans.getFilmId()));
+        filmTitleLabel.setText(seans.getFilmTitle());
     }
 
     @FXML
@@ -224,5 +251,7 @@ public class SeansController implements Controller {
             }
         }
     }
+
+
 
 }

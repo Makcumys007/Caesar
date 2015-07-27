@@ -346,12 +346,12 @@
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Редактировать">
+                        <Button mnemonicParsing="false" onAction="#handlerUpdateSeans" text="Редактировать">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Удалить">
+                        <Button mnemonicParsing="false" onAction="#handlerRemoveSeans" text="Удалить">
                            <HBox.margin>
                               <Insets right="20.0" />
                            </HBox.margin>
