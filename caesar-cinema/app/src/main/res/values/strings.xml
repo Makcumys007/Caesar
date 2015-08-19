@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Кинотеатр \"Цезарь\"</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="mon">Понедельник</string>
+    <string name="tue">Вторник</string>
+    <string name="wed">Среда</string>
+    <string name="thu">Четверг</string>
+    <string name="fri">Пятница</string>
+    <string name="sat">Суббота</string>
+    <string name="sun">Воскресенье</string>
+    <string name="title_activity_seans">Киносеансы</string>
+    <string name="title_activity_film_description">Описание фильма</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title">Название:</string>
+    <string name="genre">Жанр:</string>
+    <string name="year">Год:</string>
+    <string name="length">Длина:</string>
+</resources>

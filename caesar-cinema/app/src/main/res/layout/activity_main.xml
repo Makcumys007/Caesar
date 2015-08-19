@@ -1,0 +1,24 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#6c0404">
+
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="ru.caesar_sinema.caesar_sinema.fragments.Menu"
+        android:id="@+id/menuweek"
+        android:layout_gravity="center_horizontal"
+        tools:layout="@layout/fragment_menu"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="ru.caesar_sinema.caesar_sinema.fragments.Logo"
+        android:id="@+id/logotype"
+        android:layout_gravity="center_horizontal"
+        tools:layout="@layout/fragment_logo"/>
+</LinearLayout>
